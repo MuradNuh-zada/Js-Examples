@@ -1,0 +1,99 @@
+@import "import";
+
+#wrapper {
+    .products {
+        display: grid;
+        width: 90%;
+        max-width: 1140px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        justify-content: center;
+        margin: 0 auto;
+        .product {
+            width: 100%;
+            box-shadow: 0 0 8px 3px rgba(53, 68, 60, 0.2);
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: contain;
+            }
+            .productInfo {
+                padding: 15px;
+                h1,
+                h2,
+                p,
+                span,
+                h6 {
+                    margin-block: 8px;
+                }
+                h1 {
+                    font-size: 28px;
+                }
+                h2 {
+                    font-size: 19px;
+                    color: rgba(1, 61, 29, 0.695);
+                }
+                p {
+                    font-style: italic;
+                    color: #333;
+                    font-weight: 600;
+                }
+                :nth-child(4) {
+                    text-decoration: line-through;
+                    font-size: 14px;
+                }
+                :nth-child(6) {
+                    display: block;
+                    font-size: 18px;
+                }
+                span {
+                    font-weight: 600;
+                    color: red;
+                }
+                h6 {
+                    font-size: 14px;
+                }
+                .deleteButton {
+                    background-color: rgb(230, 85, 85);
+                    color: #fff;
+                    padding: 5px 15px;
+                    border: 1px solid rgb(230, 85, 85);
+                    border-radius: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .searching {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-block: 30px;
+        #searchProduct {
+            width: 360px;
+            padding: 5px 15px;
+            font-size: 20px;
+        }
+        [type="search"]::-webkit-search-cancel-button {
+            background-color: rgb(219, 0, 0);
+            -webkit-appearance: none;
+            height: 13px;
+            width: 13px;
+            border-radius: 50%;
+        }
+        .searchIcon {
+            font-size: 24px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+    }
+    .notfound {
+        display: flex;
+        justify-content: center;
+        #notFoundImage {
+            margin: 0 auto;
+            width: 650px;
+            display: none;
+        }
+    }
+}
